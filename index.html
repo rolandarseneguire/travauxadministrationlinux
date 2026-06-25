@@ -33,12 +33,40 @@
             background-size: 100% 100%, 35px 35px, 35px 35px;
             padding: 40px 20px;
             min-height: 100vh;
+            position: relative;
+        }
+
+        /* --- CONTENEUR BOUTON LANGUE --- */
+        .top-nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch {
+            background: rgba(0, 113, 197, 0.15);
+            border: 1px solid var(--primary-light);
+            color: var(--primary-light);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .lang-switch:hover {
+            background: var(--primary-light);
+            color: #020617;
         }
 
         header {
             text-align: center;
             margin-bottom: 60px;
-            padding-top: 20px;
         }
 
         header h1 {
@@ -184,60 +212,61 @@
 </head>
 <body>
 
+    <div class="top-nav">
+        <button class="lang-switch" id="langBtn"><i class="fas fa-globe"></i> <span>EN</span></button>
+    </div>
+
     <header>
-        <h1><span>Administration Système Linux</span></h1>
-        <p>Documentation technique & Simulations RHEL / VMware</p>
+        <h1 data-fr="<span>Administration Système Linux</span>" data-en="<span>Linux System Administration</span>"><span>Administration Système Linux</span></h1>
+        <p data-fr="Documentation technique & Simulations RHEL / VMware" data-en="Technical Documentation & RHEL / VMware Simulations"></p>
     </header>
 
     <main class="container">
 
-        <!-- LAB 1 -->
         <div class="bento-item">
             <div class="card-header">
                 <span class="badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> RHEL Enterprise 5</span>
-                <h3><i class="fas fa-server"></i> Déploiement Client-Serveur : Services DHCP et FTP</h3>
+                <h3 data-fr="<i class='fas fa-server'></i> Déploiement Client-Serveur : Services DHCP et FTP" data-en="<i class='fas fa-server'></i> Client-Server Deployment: DHCP and FTP Services"><i class="fas fa-server"></i> Déploiement Client-Serveur : Services DHCP et FTP</h3>
             </div>
-            <p>Configuration complète d'une infrastructure locale sous Red Hat Enterprise Linux. Mise en place d'une attribution dynamique d'adresses IP (DHCP) couplée à un espace de stockage sécurisé (VSFTPD) avec isolation des privilèges utilisateurs.</p>
+            <p data-fr="Configuration complète d'une infrastructure locale sous Red Hat Enterprise Linux. Mise en place d'une attribution dynamique d'adresses IP (DHCP) couplée à un espace de stockage sécurisé (VSFTPD) avec isolation des privilèges utilisateurs." data-en="Complete configuration of a local infrastructure on Red Hat Enterprise Linux. Implementation of dynamic IP address allocation (DHCP) combined with a secure storage space (VSFTPD) featuring user privilege isolation."></p>
 
             <div class="pdf-container">
                 <embed src="documents/dhcpftp.pdf" type="application/pdf" />
             </div>
 
-            <a href="documents/dhcpftp.pdf" target="_blank" class="btn-main">
+            <a href="documents/dhcpftp.pdf" target="_blank" class="btn-main" data-fr="Consulter le rapport complet" data-en="Read the full report">
                 Consulter le rapport complet
             </a>
         </div>
 
-        <!-- LAB 2 -->
         <div class="bento-item">
             <div class="card-header">
                 <span class="badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> RHEL Enterprise 5</span>
-                <h3><i class="fas fa-terminal"></i> Automatisation de Flux FTP via Scripting Bash</h3>
+                <h3 data-fr="<i class='fas fa-terminal'></i> Automatisation de Flux FTP via Scripting Bash" data-en="<i class='fas fa-terminal'></i> FTP Workflow Automation via Bash Scripting"><i class="fas fa-terminal"></i> Automatisation de Flux FTP via Scripting Bash</h3>
             </div>
-            <p>Conception et implémentation d'un script d'automatisation d'administration système. Sécurisation des transferts, gestion automatique des logs d'erreurs, traitement par lots des paquets de données et tolérance aux pannes réseau.</p>
+            <p data-fr="Conception et implémentation d'un script d'automatisation d'administration système. Sécurisation des transferts, gestion automatique des logs d'erreurs, traitement par lots des paquets de données et tolérance aux pannes réseau." data-en="Design and implementation of a system administration automation script. Secure transfers management, automated error logging, batch data processing, and network fault tolerance."></p>
 
             <div class="pdf-container">
                 <embed src="documents/SCRIPT-FTP.pdf" type="application/pdf" />
             </div>
 
-            <a href="documents/SCRIPT-FTP.pdf" target="_blank" class="btn-main">
+            <a href="documents/SCRIPT-FTP.pdf" target="_blank" class="btn-main" data-fr="Consulter le rapport complet" data-en="Read the full report">
                 Consulter le rapport complet
             </a>
         </div>
 
-        <!-- LAB 3 -->
         <div class="bento-item">
             <div class="card-header">
                 <span class="badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> RHEL 9.7</span>
-                <h3><i class="fas fa-network-wired"></i> Passerelle NAT, Adressage Statique et Résolution DNS</h3>
+                <h3 data-fr="<i class='fas fa-network-wired'></i> Passerelle NAT, Adressage Statique et Résolution DNS" data-en="<i class='fas fa-network-wired'></i> NAT Gateway, Static Addressing and DNS Resolution"><i class="fas fa-network-wired"></i> Passerelle NAT, Adressage Statique et Résolution DNS</h3>
             </div>
-            <p>Architecture et routage d'un réseau sécurisé. Configuration d'une passerelle d'adresse réseau (NAT) pour l'accès internet des sous-réseaux privés, couplée à un serveur de noms de domaine (BIND9) pour la résolution locale.</p>
+            <p data-fr="Architecture et routage d'un réseau sécurisé. Configuration d'une passerelle d'adresse réseau (NAT) pour l'accès internet des sous-réseaux privés, couplée à un serveur de noms de domaine (BIND9) pour la résolution locale." data-en="Architecture and routing of a secure network. Configuration of a Network Address Translation (NAT) gateway for internet access in private subnets, coupled with a Domain Name Server (BIND9) for local resolution."></p>
 
             <div class="pdf-container">
                 <embed src="documents/MISE-EN-PLACE-DE-PASSERELLE-NAT.pdf" type="application/pdf" />
             </div>
 
-            <a href="documents/MISE-EN-PLACE-DE-PASSERELLE-NAT.pdf" target="_blank" class="btn-main">
+            <a href="documents/MISE-EN-PLACE-DE-PASSERELLE-NAT.pdf" target="_blank" class="btn-main" data-fr="Consulter le rapport complet" data-en="Read the full report">
                 Consulter le rapport complet
             </a>
         </div>
@@ -245,8 +274,38 @@
     </main>
 
     <footer style="text-align: center; margin-top: 80px; padding-bottom: 20px; color: var(--text-light); font-size: 0.8rem; opacity: 0.6;">
-        <p>© 2026 | Arsène Roland GUIRE | Infrastructure Documentation</p>
+        <p data-fr="© 2026 | Arsène Roland GUIRE | Documentation d'Infrastructure" data-en="© 2026 | Arsène Roland GUIRE | Infrastructure Documentation">© 2026 | Arsène Roland GUIRE | Infrastructure Documentation</p>
     </footer>
 
+    <script>
+        // TRADUCTION ENGINE
+        const langBtn = document.getElementById('langBtn');
+        let currentLang = localStorage.getItem('portfolio-lang') || 'fr';
+
+        function updateLanguage(lang) {
+            document.querySelectorAll('[data-fr]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text.includes('<')) {
+                    el.innerHTML = text;
+                } else {
+                    el.textContent = text;
+                }
+            });
+            
+            document.documentElement.setAttribute('lang', lang);
+            langBtn.querySelector('span').textContent = lang === 'fr' ? 'EN' : 'FR';
+            localStorage.setItem('portfolio-lang', lang);
+        }
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            updateLanguage(currentLang);
+        });
+
+        // INITIALISATION LANGUE AU CHARGEMENT
+        window.addEventListener('load', () => {
+            updateLanguage(currentLang);
+        });
+    </script>
 </body>
 </html>
