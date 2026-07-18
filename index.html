@@ -18,6 +18,7 @@
             --text-light: #94a3b8;
             --glass: blur(12px);
             --shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            --accent: #f97316;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -209,6 +210,12 @@
             border: 1px solid rgba(249, 115, 22, 0.2);
         }
 
+        .badge-windows {
+            background: rgba(0, 164, 239, 0.1);
+            color: #00a4ef;
+            border: 1px solid rgba(0, 164, 239, 0.2);
+        }
+
         @media (max-width: 480px) {
             .container {
                 grid-template-columns: 1fr;
@@ -232,7 +239,24 @@
 
     <main class="container">
 
-        <!-- NOUVEAU PROJET : FortiGate & Oracle Linux -->
+        <!-- PROJET 1 : Services de Domaine Active Directory (AD DS) -->
+        <div class="bento-item">
+            <div class="card-header">
+                <span class="badge-tag badge-windows"><i class="fab fa-windows" style="margin-right: 5px;"></i> Windows Server</span>
+                <h3 data-fr="<i class='fas fa-users-cog'></i> Déploiement Active Directory Domain Services (AD DS)" data-en="<i class='fas fa-users-cog'></i> Active Directory Domain Services (AD DS) Deployment"><i class="fas fa-users-cog"></i> Déploiement Active Directory Domain Services (AD DS)</h3>
+            </div>
+            <p data-fr="Mise en place et configuration d'un contrôleur de domaine Windows Server. Gestion centralisée des identités, structuration des unités d'organisation (OU), déploiement de stratégies de groupe (GPO) et sécurisation des accès réseau de l'entreprise." data-en="Setup and configuration of a Windows Server domain controller. Centralized identity management, organization units (OU) structuring, Group Policy Objects (GPO) deployment, and corporate network access control security."></p>
+
+            <div class="pdf-container">
+                <embed src="documents/RAPPORT-AD-DS.pdf" type="application/pdf" />
+            </div>
+
+            <a href="documents/RAPPORT-AD-DS.pdf" target="_blank" class="btn-main" data-fr="Consulter le rapport complet" data-en="Read the full report">
+                Consulter le rapport complet
+            </a>
+        </div>
+
+        <!-- PROJET 2 : FortiGate & Oracle Linux -->
         <div class="bento-item">
             <div class="card-header">
                 <span class="badge-tag badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> FortiGate & Oracle Linux & GNS3 & VMware Workstation Pro</span>
@@ -249,7 +273,7 @@
             </a>
         </div>
 
-        <!-- PROJET 2 : Passerelle NAT -->
+        <!-- PROJET 3 : Passerelle NAT -->
         <div class="bento-item">
             <div class="card-header">
                 <span class="badge-tag badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> RHEL 9.7</span>
@@ -266,7 +290,7 @@
             </a>
         </div>
 
-        <!-- PROJET 3 : Déploiement Client-Serveur DHCP/FTP -->
+        <!-- PROJET 4 : Déploiement Client-Serveur DHCP/FTP -->
         <div class="bento-item">
             <div class="card-header">
                 <span class="badge-tag badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> RHEL Enterprise 5</span>
@@ -283,13 +307,13 @@
             </a>
         </div>
 
-        <!-- PROJET 4 : Scripting Bash FTP -->
+        <!-- PROJET 5 : Scripting Bash FTP -->
         <div class="bento-item">
             <div class="card-header">
                 <span class="badge-tag badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> RHEL Enterprise 5</span>
                 <h3 data-fr="<i class='fas fa-terminal'></i> Automatisation de Flux FTP via Scripting Bash" data-en="<i class='fas fa-terminal'></i> FTP Workflow Automation via Bash Scripting"><i class="fas fa-terminal"></i> Automatisation de Flux FTP via Scripting Bash</h3>
             </div>
-            <p data-fr="Conception et implémentation d'un script d'automatisation d'administration système. Sécurisation des transferts, gestion automatique des logs d'erreurs, traitement par lots des paquets de données et tolérance aux pannes réseau." data-en="Design and implementation of a system administration automation script. Secure transfers management, automated error logging, batch data processing, and network fault tolerance."></p>
+            <p data-fr="Conception et implémentation d'un script d'automatisation d'administration système. Securisation des transferts, gestion automatique des logs d'erreurs, traitement par lots des paquets de données et tolérance aux pannes réseau." data-en="Design and implementation of a system administration automation script. Secure transfers management, automated error logging, batch data processing, and network fault tolerance."></p>
 
             <div class="pdf-container">
                 <embed src="documents/SCRIPT-FTP.pdf" type="application/pdf" />
