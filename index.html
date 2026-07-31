@@ -65,32 +65,43 @@
             color: #020617;
         }
 
+        /* --- HEADER AVEC BACKGROUND DATACENTER --- */
         header {
+            max-width: 1280px;
+            margin: 0 auto 60px auto;
             text-align: center;
-            margin-bottom: 60px;
+            padding: 60px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            /* Image de fond Datacenter avec superposition sombre */
+            background: linear-gradient(180deg, rgba(3, 7, 18, 0.75) 0%, rgba(3, 7, 18, 0.90) 100%), 
+                        url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+            box-shadow: var(--shadow);
         }
 
         header h1 {
-            font-size: 2.6rem;
-            font-weight: 300;
-            letter-spacing: -1.5px;
-            margin-bottom: 12px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            line-height: 1.2;
         }
 
         header h1 span {
             background: linear-gradient(90deg, var(--primary-light), #fff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 800;
         }
 
         header p {
-            color: var(--text-light);
-            font-weight: 600;
+            color: var(--primary-light);
+            font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            font-size: 0.75rem;
-            opacity: 0.8;
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
         .container {
@@ -221,7 +232,7 @@
                 grid-template-columns: 1fr;
             }
             header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -233,11 +244,30 @@
     </div>
 
     <header>
-        <h1 data-fr="<span>Infrastructure & Sécurité Linux</span>" data-en="<span>Linux Infrastructure & Security</span>"><span>Infrastructure & Sécurité Linux</span></h1>
-        <p data-fr="Documentation technique & Simulations Systèmes et Réseaux" data-en="Technical Documentation & Systems and Networks Simulations"></p>
+        <h1 data-fr="<span>Infrastructure Système & Réseaux D'Entreprise</span>" data-en="<span>Enterprise System & Network Infrastructure</span>">
+            <span>Infrastructure Système & Réseaux D'Entreprise</span>
+        </h1>
+        <p data-fr="(Linux, Windows)" data-en="(Linux, Windows)">(Linux, Windows)</p>
     </header>
 
     <main class="container">
+
+        <!-- PROJET NOUVEAU : Serveur Kea DHCP & Relais FortiGate -->
+        <div class="bento-item">
+            <div class="card-header">
+                <span class="badge-tag badge-rhel"><i class="fab fa-redhat" style="margin-right: 5px;"></i> RHEL & FortiGate</span>
+                <h3 data-fr="<i class='fas fa-network-wired'></i> Serveur Kea DHCP (RHEL) & Relais DHCP FortiGate" data-en="<i class='fas fa-network-wired'></i> Kea DHCP Server (RHEL) & FortiGate DHCP Relay"><i class="fas fa-network-wired"></i> Serveur Kea DHCP (RHEL) & Relais DHCP FortiGate</h3>
+            </div>
+            <p data-fr="Déploiement d'un serveur Kea DHCP sous Red Hat Enterprise Linux interconnecté via un pare-feu FortiGate opérant comme agent relais (DHCP Relay). Attribution dynamique de baux IP et résolutions DNS pour clients Windows à travers des politiques de sécurité strictes." data-en="Deployment of a Kea DHCP server on Red Hat Enterprise Linux interconnected via a FortiGate firewall acting as a DHCP Relay agent. Dynamic IP lease allocation and DNS resolution for Windows clients across strict firewall policies."></p>
+
+            <div class="pdf-container">
+                <embed src="documents/SERVEUR-KEA-DHCP-2.pdf" type="application/pdf" />
+            </div>
+
+            <a href="documents/SERVEUR-KEA-DHCP-2.pdf" target="_blank" class="btn-main" data-fr="Consulter le rapport complet" data-en="Read the full report">
+                Consulter le rapport complet
+            </a>
+        </div>
 
         <!-- PROJET 1 : Services de Domaine Active Directory (AD DS) -->
         <div class="bento-item">
